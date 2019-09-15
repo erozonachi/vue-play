@@ -21,9 +21,9 @@ export default {
   },
   data: () => ({
     todos: [
-      { id: uuid(), text: "Vegetables" },
-      { id: uuid(), text: "Cheese" },
-      { id: uuid(), text: "Whatever else humans are supposed to eat" }
+      { id: uuid(), text: "Buy Vegetables" },
+      { id: uuid(), text: "Purchase cheese from the stores" },
+      { id: uuid(), text: "Buy Whatever else humans are supposed to eat" }
     ],
     todoText: "",
     title: "Awesome Todo App"
@@ -37,6 +37,7 @@ export default {
             text: this.todoText
           }
         ]);
+        this.todoText = "";
       }
     }
   }
