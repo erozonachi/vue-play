@@ -52,5 +52,7 @@ export default {
   max-width: 600px;
   width: 100%;
   margin: 20px auto;
+  border: 1px solid teal;
+  border-radius: 8px 0;
 }
 </style>
