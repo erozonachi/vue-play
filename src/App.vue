@@ -21,8 +21,21 @@ export default {
       { id: uuid(), text: "Vegetables" },
       { id: uuid(), text: "Cheese" },
       { id: uuid(), text: "Whatever else humans are supposed to eat" }
-    ]
-  })
+    ],
+    todoText: ""
+  }),
+  methods: {
+    addNewTodo: function() {
+      if (this.todoText) {
+        this.todos = this.todos.concat([
+          {
+            id: uuid(),
+            text: this.todoText
+          }
+        ]);
+      }
+    }
+  }
 };
 </script>
 
