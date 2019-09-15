@@ -1,7 +1,10 @@
-<template v-if="todos.length">
-  <ul>
-    <li v-for="todo of todos" :key="todo.id">{{ todo.text }}</li>
-  </ul>
+<template>
+  <div class="content" v-if="todos.length">
+    <ul>
+      <li v-for="todo of todos" :key="todo.id">{{ todo.text }}</li>
+    </ul>
+  </div>
+  <div v-else>No todo found</div>
 </template>
 
 <script>
