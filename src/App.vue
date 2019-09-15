@@ -1,7 +1,7 @@
 <template>
-  <ul>
-    <TodoItem v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id" />
-  </ul>
+  <div class="container">
+    <TodoItem :todos="todos" />
+  </div>
 </template>
 
 <script>
@@ -13,7 +13,7 @@ export default {
     TodoItem
   },
   data: () => ({
-    groceryList: [
+    todos: [
       { id: 0, text: "Vegetables" },
       { id: 1, text: "Cheese" },
       { id: 2, text: "Whatever else humans are supposed to eat" }
@@ -23,8 +23,12 @@ export default {
 </script>
 
 <style>
-ul {
-  list-style-type: none;
-  padding: 0;
+.container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 600px;
+  width: 100%;
+  margin: 20px auto;
 }
 </style>
