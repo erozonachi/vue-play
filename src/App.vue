@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import uuid from "uuid";
 import TodoItem from "./components/TodoItem.vue";
 
 export default {
@@ -14,9 +15,9 @@ export default {
   },
   data: () => ({
     todos: [
-      { id: 0, text: "Vegetables" },
-      { id: 1, text: "Cheese" },
-      { id: 2, text: "Whatever else humans are supposed to eat" }
+      { id: uuid(), text: "Vegetables" },
+      { id: uuid(), text: "Cheese" },
+      { id: uuid(), text: "Whatever else humans are supposed to eat" }
     ]
   })
 };
