@@ -12,4 +12,44 @@ export default {
   name: "TodoFooter",
   props: ["value"]
 };
-</Script>
+</script>
+
+<style scoped>
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 8px 0;
+  background-color: teal;
+  padding: 10px;
+}
+.footer form {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+}
+.footer form input,
+.footer form button {
+  display: flex;
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  background-color: azure;
+  color: teal;
+  font-size: 120%;
+}
+input {
+  width: 80%;
+}
+button {
+  width: 15%;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+</style>
