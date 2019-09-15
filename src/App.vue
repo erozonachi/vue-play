@@ -2,7 +2,7 @@
   <div class="container">
     <TodoHeader :title="title" />
     <TodoItem :todos="todos" />
-    <TodoFooter v-model="todoText" v-on:add-item="addNewTodo"></TodoFooter>
+    <TodoFooter v-model.trim="todoText" v-on:add-item="addNewTodo"></TodoFooter>
   </div>
 </template>
 
@@ -37,8 +37,8 @@ export default {
             text: this.todoText
           }
         ]);
-        this.todoText = "";
       }
+      this.todoText = "";
     }
   }
 };
