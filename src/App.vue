@@ -2,6 +2,7 @@
   <div class="container">
     <todo-header title="Awesome Todo App"></todo-header>
     <TodoItem :todos="todos" />
+    <todo-footer v-model="todoText" @addTodoItem="addNewTodo"></todo-footer>
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 import uuid from "uuid";
 import TodoHeader from "./components/Header";
 import TodoItem from "./components/TodoItem.vue";
+import TodoFooter from "./components/Footer";
 
 export default {
   name: "app",
   components: {
     TodoItem,
-    "todo-header": TodoHeader
+    "todo-header": TodoHeader,
+    "todo-footer": TodoFooter
   },
   data: () => ({
     todos: [
