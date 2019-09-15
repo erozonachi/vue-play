@@ -1,12 +1,14 @@
-<template>
-  <li>{{ todo.text }}</li>
+<template v-if="todos.length">
+  <ul>
+    <li v-for="todo of todos" :key="todo.id">{{ todo.text }}</li>
+  </ul>
 </template>
 
 <script>
 export default {
   name: "TodoItem",
   props: {
-    todo: Object
+    todos: Array
   }
 };
 </script>
