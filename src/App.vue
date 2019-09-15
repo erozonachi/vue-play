@@ -1,17 +1,20 @@
 <template>
   <div class="container">
+    <todo-header title="Awesome Todo App"></todo-header>
     <TodoItem :todos="todos" />
   </div>
 </template>
 
 <script>
 import uuid from "uuid";
+import TodoHeader from "./components/Header";
 import TodoItem from "./components/TodoItem.vue";
 
 export default {
   name: "app",
   components: {
-    TodoItem
+    TodoItem,
+    "todo-header": TodoHeader
   },
   data: () => ({
     todos: [
